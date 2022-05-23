@@ -1,11 +1,9 @@
 import { Router } from 'express';
 import { CategoriesRepository } from '../modules/cars/repositories/CategoriesRepository';
-import { MysqlCategoriesRepository } from '../modules/cars/repositories/MysqlCategoriesRepository';
 import { CreateCategoryService } from '../modules/cars/services/CreateCategoryService';
 
 const categoriesRoutes = Router();
 
-// const categoriesRepository = new MysqlCategoriesRepository();
 const categoriesRepository = new CategoriesRepository();
 
 categoriesRoutes.post('/', (request, response) => {
