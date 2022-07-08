@@ -10,7 +10,7 @@ class ImportCategoryController {
         const { file } = request;
         await importCategoryUseCase.execute(file);
         
-        return response.send();
+        return response.status(201).send();
     }
 }
 
